@@ -1,0 +1,224 @@
+/* ================= POPULAR CARD ================ */
+.popular-card {
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    height: 185px;;
+}
+.popular-card > h3 {
+    position: absolute;
+    bottom: 5px;
+    left: 8px;
+    color: white;
+    font-weight: 400;
+    z-index: 1000;
+}
+.popular-card > .backdrop {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: linear-gradient(0deg, #262626f0, transparent);
+}
+
+.popular-card img {
+  transition: .3s;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.popular-card:hover img{
+  transform: scale(1.1);  
+}
+
+.panel-review > span {
+  font-size: 13px;
+}
+
+
+
+
+/* ===================== GIG CARD ======================== */
+.gig-card{
+  border: 1px solid var(--second-color);
+  margin-bottom: 5px;
+}
+
+.gig-card .uil, .gig-card .uis{
+  font-size: 16px;
+}
+
+.gig-card .card-image{
+  height: 162px;
+}
+.gig-card .card-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  margin: auto;
+}
+
+
+.gig-card .card-content {
+  padding: .7rem;
+  padding-bottom: 2px;
+}
+
+.gig-card .card-content .card-title {
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: .5rem !important;
+  transition: .3s;
+}
+
+.gig-card .card-content .card-title:hover {
+  color: var(--first-color);
+}
+
+.gig-card .card-content .card-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #7c7c7c;
+}
+
+.gig-card .card-content .card-panel .panel-review {
+  display: flex;
+  align-items: center;
+}
+
+
+.panel-username{
+  display: flex;
+  align-items: center;
+}
+.panel-username .light {
+  width: 8px;
+  height: 8px;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+
+.panel-username .light {
+  width: 8px;
+  height: 8px;
+  background: #33996a;
+  border-radius: 50%;
+}
+
+.card-data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-data .uil-heart {
+  font-size: 20px;
+  color: #817f7f;
+}
+
+.card-data .gig-price {
+  display: flex;
+  align-items: end;
+}
+
+.card-data .gig-price small {
+  font-size: 13px;
+}
+
+.card-data .gig-price > h5, .card-data .gig-price small {
+  color: var(--first-color);
+  margin-left: 6px;
+}
+
+.card-data .gig-price h5 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.card-data {
+  padding-top: 2px;
+  margin-top: 10px;
+  border-top: 1px solid var(--second-color);
+}
+
+.card-fav{
+  cursor: pointer;
+}
+.card-fav > img {
+  width: 17px;
+  margin: 7px 0;
+}
+
+
+.react-multi-carousel-item > div {
+  margin-right: 8px;
+}
+button.react-multiple-carousel__arrow {
+  background: white;
+  border: 1px solid var(--second-color);
+  min-width: 32px;
+  min-height: 32px;
+}
+.react-multiple-carousel__arrow::before {
+  font-size: 13px;
+  color: rgb(0, 0, 0);
+}
+button.react-multiple-carousel__arrow:hover{
+  background: rgb(226, 226, 226);
+}
+.react-multi-carousel-track{
+  margin: auto;
+}
+
+.panel-username p {
+  width: 86%;
+  overflow: hidden;
+}
+
+
+/* ============== PORTFOLIO CARD ================ */
+.portfolio-card {
+  position: relative;
+  height: 185px;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.portfolio-card .backdrop {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: linear-gradient(0deg, #202020e6, transparent);
+}
+
+.portfolio-card .card-contents {
+  color: white;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  padding: 0 7px;
+  font-size: 14px;
+  transition: .3s;
+}
+.portfolio-card .card-content-texts h4{
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  margin-bottom: -2px;
+}
+.portfolio-card .card-content-texts p{
+  font-weight: 400;
+  color: rgb(207, 207, 207);
+}
+
+.portfolio-card:hover .card-contents{
+  transform: translateY(-67px);
+} 

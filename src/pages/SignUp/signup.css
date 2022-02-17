@@ -1,0 +1,74 @@
+.sign-up {
+  background: #ebebeb;
+}
+
+.sign-up-content {
+    max-width: 400px;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 0 14px 0 #e5e5e5;
+    overflow: hidden;
+}
+
+.sign-up-option {
+    display: flex;
+    background: #ededed;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.sign-up-option img {
+    width: 18px;
+    margin-right: 7px;
+}
+.sign-up-option div {
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+    padding: 7px;
+    font-size: 14px;
+}
+.sign-up-option .is-active{
+  background: var(--first-color);
+  color: white;  
+}
+.next-button {
+    background: var(--first-color);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+}
+.social-btn {
+    background: #838383;
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+
+.sign-up-content form{
+  display: flex;
+}
+.sign-up-1stpage, .sign-up-2ndpage {
+  flex: none;
+  width: 100%;
+  transition: .3s;
+}
+.sign-up-1stpage{
+  margin-right: 1rem;
+}
+
+.is-1st{
+  margin-left: -24rem;
+}
+
+@media screen and (min-width: 768px) {
+  .sign-up {
+    padding: 8rem 0;
+  }    
+}

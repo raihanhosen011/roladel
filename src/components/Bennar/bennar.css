@@ -1,0 +1,42 @@
+.kw-bennar{
+  padding: 3rem 0; 
+  background-image: url('../../images/kw-banner.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.kw-bennar .bennar-desc{
+  color: #464646;
+  font-weight: 450;
+}
+
+.bennar-wrapper .bennar-search{ 
+  width: 470px;
+  margin: auto;
+}
+.bennar-wrapper .bennar-search__wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: white;
+    border: 1px solid var(--second-color);
+    padding-left: .6rem;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: .9rem;
+}
+
+.bennar-search__wrapper .search-button button {
+    cursor: pointer;
+    padding: 9px 13px;
+}
+.bennar-search__wrapper > svg{
+  color: var(--second-color);
+}
+.bennar-search__sample{
+  font-size: 14px;
+  color: rgb(60, 60, 60);
+  text-align: start; 
+  font-weight: 300;
+}

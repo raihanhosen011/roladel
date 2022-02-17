@@ -1,0 +1,137 @@
+.faq-bennar {
+  height: 165px;
+  background: url('../../images/kw-banner.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.faq-bennar__search .uil {
+    margin-right: 10px;
+}
+.faq-bennar__search {
+    background: white;
+    padding: 8px 10px;
+    text-align: start;
+    border-radius: 5px;
+    border: 1px solid var(--second-color);
+    width: 355px;
+    margin-top: 8px;
+}
+.faq-bennar__search input{
+   width: 90%; 
+}
+
+/* ===================== FAQ HOME ====================== */
+.article-box {
+  width: fit-content;
+  margin: auto;
+  text-align: center;
+  cursor: pointer;
+  padding: 0px 23px;
+  margin-bottom: 16px;
+}
+
+.article-box .article-title {
+  font-size: 18px;
+  color: #3c3c3c;
+  font-weight: 500;
+  margin-top: 4px;
+}
+.faq-options {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+.faq-quistion-wrap {
+    min-height: 22rem;
+}
+
+.questions-content {
+  background: rgb(255, 255, 255);
+  min-width: 28rem;
+  margin: auto;
+}
+.faq-section {
+  background: #ebebeb;
+}
+
+/* ======================= QUESTIONS =================== */
+.questions-content-header, .answare-content-header {
+  padding: 4px 15px;
+  background: var(--first-color);
+  color: white;
+}
+
+.questions-content-header > .uil, .answare-content-header > .uil {
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.questions-content{
+  max-width: 30rem;
+}
+.questions-content, .answare-content {
+  background: rgb(255, 255, 255);
+  margin: auto;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 1px 1px 22px 0px #cbcbcb;
+}
+
+.question-wrapper .single-question {
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--second-color);
+  cursor: pointer;
+  transition: .3s;
+  display: flex;
+  align-items: center;
+}
+.question-wrapper .single-question img{
+  margin-right: .6rem;
+  width: 10px;
+  height: 10px;
+}
+.question-wrapper .single-question:hover{
+  background-color: rgb(238, 238, 238);
+}
+
+/* ======================== ANSWARE ======================== */
+.answare-content-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.answare-content-header > h4{
+  color: white;
+  font-weight: 500;
+}
+
+.answare-content {
+  min-width: 500px;
+  max-width: 650px;
+}
+.answare-content-article{
+  padding: 20px;
+}
+
+
+/* For medium devices */
+@media screen and (max-width: 568px) {
+  .answare-content {
+    max-width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .questions-content,.answare-content {
+    max-width: 100% !important;
+    min-width: 100% !important;
+  }
+  .faq-bennar__search{
+    width: fit-content !important; 
+  }
+}

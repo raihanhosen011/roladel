@@ -1,167 +1,239 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+/*==================== GOOGLE FONTS ====================*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
+/*==================== VARIABLES CSS ====================*/
+:root {
+  /*========== Colors ==========*/
+  --first-color: #04b70a;
+  --first-color-alt: #3BD640;
+
+  --second-color: #dbdbdb;
+
+  --title-color: rgb(15, 15, 15);
+  --text-color: rgb(17, 17, 17);
+
+  --scroll-bar-color: rgb(224, 224, 224);
+  --scroll-thumb-color: rgb(177, 177, 177);
+
+  /*========== Font and typography ==========*/
+  --body-font: "Poppins", sans-serif !important;
+
+  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.2rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== Margenes Bottom ==========*/
+  /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+/* Font size for large devices */
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 3rem;
+    --h1-font-size: 2.5rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+
+
+/*==================== BASE ====================*/
 * {
-  font-family: 'Quicksand', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-.fs-22{
-  font-size: 22px;
+html {
+  scroll-behavior: smooth;
 }
-.fs-14{
-  font-size: 14px;
+body {
+  color: var(--text-color);
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  position: relative;
+  overflow-x: hidden;
 }
-.fs-13{
-  font-size: 13px !important;
+ul {
+  list-style: none;
 }
-.google_color{
-  color: red;
+a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-family: var(--body-font);
+  font-size: var(--small-font-size);
 }
-.grey{
-  background: rgb(230, 230, 230);
+img {
+  max-width: 100%;
+  height: auto;
 }
-.face_color{
-  color: #1778F2;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 550;
+  color: var(--title-color);
 }
-.pointer{
-  cursor: pointer;
-}
-.pink_gd{
-  background: linear-gradient(45deg,#4f59ff,#15dbff) !important;
-}
-.w-16{
-  width: 16px;
-}
-.w-18{
-  width: 18px !important; 
-}
-.bg-tomato{
-  background: tomato !important;
-}
-.w-13{
-  width: 13px;
-}
-.input{
+
+input,textarea,button{
   border: none;
   outline: none;
-  background: transparent;
-  flex: auto;
+  font-family: var(--body-font);
 }
-.bangla {
-  font-family: "Hind Siliguri", sans-serif !important;
-  font-size: 18px;
+::placeholder{
+  font-size: 14px;
 }
 
-/*Login page*/
-.login {
-  height: 100vh;
+/*==================== LAYOUT ====================*/
+.container {
+  max-width: 1275px;
+  margin: auto;
+  padding-left: var(--mb-1-5);
+  padding-right: var(--mb-1-5);
+}
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+
+/* show menu */
+.show-menu {
+  bottom: 0;
+}
+
+/* ===================== RE-USEABLE CLASSES ==================== */
+section {
+  padding: 2rem 0;
+}
+.section-title {
+  font-size: var(--h2-font-size);
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  text-align: center;
+}
+.section-header{
+  margin-bottom: 1.5rem;
+}
+.section-button {
+  padding: 7px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid var(--second-color);
+  background: var(--first-color);
+  color: white;
+}
+
+.page-head{
+  margin-bottom: 2rem;
+}
+.page-title {
+  font-weight: 500;
+  font-size: 30px;
+}
+
+
+.input-style, .textarea-style {
+  appearance: none;
+  background: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 24px;
+  outline: none;
+  padding: 8px 11px;
+  border: 1px solid var(--second-color);
   width: 100%;
-  background-color: #5c3ffd;
-  background-image: url('https://cdn.pixabay.com/photo/2017/05/16/11/45/blue-waves-2317606_960_720.png');
-  display: flex;
-  align-items: center;
-  background-repeat: no-repeat;
-  justify-content: center;
-  background-size: cover;
-  background-blend-mode: soft-light;
 }
-
-.login_container {
-  background: white;
-  border-radius: 10px;
-  padding: 20px;
-  z-index: 1;
-  color: #565656;
-  max-width: 260px;
+.table-style {
+  font-size: 14px;
   width: 100%;
+  border-collapse: collapse;
+  min-width: 55rem;
+}
+.order-table-wrap {
+  overflow-x: auto;
 }
 
-.single_info {
-  padding: 5px 7px;
-  border: 1px solid #d8d8d8;
-  border-radius: 7px;
-  cursor: pointer;
+.first-color{
+  color: var(--first-color);
+}
+.text-red{
+  color: red;
+}
+
+/*==================== BUTTONS ====================*/
+.kw-button {
+  display: inline-block;
+  color: #fff;
+  padding: 0.4rem .8rem;
   transition: .3s;
 }
 
-.login_google:hover{
-  color: red;
-  border-color: rgba(255, 0, 0, 0.349);
+.kw-button--green {
+  background-color: var(--first-color);
+}
+.kw-button--green:hover{
+  background-color: var(--first-color-alt);
 }
 
-.login_facebook:hover{
-  color: #1778F2;
-  border-color: #177af265;
+
+
+/*========== SCROLL BAR ==========*/
+body::-webkit-scrollbar, .gm-scroll-view::-webkit-scrollbar {
+  width: 0.6rem;
+  background-color: var(--scroll-bar-color);
+  border-radius: 0.5rem;
+}
+body::-webkit-scrollbar-thumb, .gm-scroll-view::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb-color);
+  border-radius: 0.5rem;
+}
+body::-webkit-scrollbar-thumb:hover, .gm-scroll-view::-webkit-scrollbar-thumb:hover {
+  background-color: var(--second-color);
 }
 
-/* Chats Page */
-.button {
-  padding: 2px 12px;
-  border: none;
-  outline: none;
-  border-radius: 8px;
+
+/*==================== MEDIA QUERIES ====================*/
+/* For small devices */
+@media screen and (max-width: 350px) {
 }
 
-.chats-page {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100vw;
-  height: 100vh;
+/* For medium devices */
+@media screen and (min-width: 568px) {
+
 }
 
-.nav-bar {
-  width: 100%;
-  height: 66px;
-  background-color: #002766;
+@media screen and (min-width: 768px) {
+
 }
 
-.logo-tab {
-  position: absolute;
-  left: 22px;
-  top: 12px;
-  font-size: 32px;
-  font-weight: 700;
-  color: white;
-}
+/* For large devices */
+@media screen and (min-width: 1024px) {
 
-.logout-tab {
-  position: absolute;
-  top: 22px;
-  right: 22px;
-  color: white;
-  cursor: pointer;
-}
-
-::-webkit-scrollbar {
-  width: 0; /* Remove scrollbar space */
-  background: transparent; /* Optional: just make scrollbar invisible */
-}
-
-/*footer*/
-
-p.footer {
-  margin: 0;
-  position: absolute;
-  bottom: 2px;
-  left: 10px;
-  font-size: 14px;
-  font-weight: 700;
-  color: #7d7d7d;
-}
-
-@media screen and (max-width: 660px) {
-  p.footer {
-    display: none;
-  }
-}
-.preloader{
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.max-width{
-  max-width: 1080px;
-  margin: auto !important;
 }
